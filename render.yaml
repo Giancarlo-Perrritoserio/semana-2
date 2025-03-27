@@ -1,0 +1,17 @@
+services:
+  - name: laravel-app
+    type: web
+    env: docker
+    repo: https://github.com/Giancarlo-Perrritoserio/semana-2.git
+    region: oregon
+    plan: free
+    rootDir: /
+    branch: main
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        sync: false
+      - key: DB_CONNECTION
+        value: sqlite
